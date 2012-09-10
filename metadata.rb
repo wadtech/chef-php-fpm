@@ -32,3 +32,11 @@ attribute 'php_fpm/mode',
   :description  =>  'Which file permissions the socket-file should have.',
   :required     =>  "recommended"
 
+attribute 'php_fpm/pool_name',
+  :description  =>  'The name of the PHP FPM pool.',
+  :required     =>  "recommended"
+
+attribute 'php_fpm/tunable',
+  :description  =>  'Various tunable options to customize and optimize PHP FPM.',
+  :required     =>  "recommended"
+
