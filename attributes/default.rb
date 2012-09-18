@@ -11,12 +11,16 @@ default[:php_fpm][:mode]                                =   "0666"
                                                         
 default[:php_fpm][:pool_name]                           =   'www'
 
+#PHP FPM php.ini settings
+default[:php_fpm][:php_ini][:max_execution_time]        =   30
+
+#Tunable settings in www.conf
 #Nil means default php-fpm settings will be used
 default[:php_fpm][:tunable][:listen_backlog]            =   nil
 default[:php_fpm][:tunable][:allowed_clients]           =   nil
 default[:php_fpm][:tunable][:process_manager_mode]      =   'dynamic'
 
-default[:php_fpm][:tunable][:max_children]              =   10
+default[:php_fpm][:tunable][:max_children]              =   8
 default[:php_fpm][:tunable][:start_servers]             =   4
 default[:php_fpm][:tunable][:min_spare_servers]         =   2
 default[:php_fpm][:tunable][:max_spare_servers]         =   4

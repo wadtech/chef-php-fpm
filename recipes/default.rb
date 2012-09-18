@@ -5,6 +5,14 @@ service "php5-fpm" do
   supports  [:start, :restart, :stop]
 end
 
+template "/etc/php5/fpm/php.ini" do
+  source "php.ini.erb"
+  owner "root"
+  group "root"
+  mode 0644
+  notifies :restart, resources(:service => "php5-fpm"), :immediately
+end
+
 template "/etc/php5/fpm/pool.d/www.conf" do
   source "www.conf.erb"
   owner "root"
