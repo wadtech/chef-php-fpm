@@ -12,7 +12,12 @@ default[:php_fpm][:mode]                                =   "0666"
 default[:php_fpm][:pool_name]                           =   'www'
 
 #PHP FPM php.ini settings
+default[:php_fpm][:php_ini][:memory_limit]              =   '128M'
 default[:php_fpm][:php_ini][:max_execution_time]        =   30
+default[:php_fpm][:php_ini][:upload_max_filesize]       =   '2M'
+default[:php_fpm][:php_ini][:post_max_size]             =   '8M'
+default[:php_fpm][:php_ini][:realpath_cache_size]       =   nil
+default[:php_fpm][:php_ini][:realpath_cache_ttl]        =   nil
 
 #Tunable settings in www.conf
 #Nil means default php-fpm settings will be used
@@ -50,5 +55,3 @@ default[:php_fpm][:tunable][:limit_extensions]          =   nil
 
 default[:php_fpm][:tunable][:env_variables]             =   nil #If using this variable, a Hash is expected with values in the format of env variable => variable value.
 default[:php_fpm][:tunable][:limit_extensions]          =   nil
-
-
