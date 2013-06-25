@@ -1,17 +1,18 @@
 default[:php_fpm][:pid_file]                            =   "/var/run/php5-fpm.pid"
-                                                        
+
 default[:php_fpm][:socket]                              =   "/dev/shm/php5-fpm.sock"
 default[:php_fpm][:port]                                =   9000
-                                                        
+
 default[:php_fpm][:listen_to]                           =   'socket'
-                                                        
+
 default[:php_fpm][:user]                                =   "www-data"
 default[:php_fpm][:group]                               =   "www-data"
 default[:php_fpm][:mode]                                =   "0666"
-                                                        
+
 default[:php_fpm][:pool_name]                           =   'www'
 
 #PHP FPM php.ini settings
+default[:php_fpm][:php_ini][:directives]                =   {}
 default[:php_fpm][:php_ini][:memory_limit]              =   '128M'
 default[:php_fpm][:php_ini][:max_execution_time]        =   30
 default[:php_fpm][:php_ini][:upload_max_filesize]       =   '2M'
