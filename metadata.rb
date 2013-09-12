@@ -1,10 +1,11 @@
+name             "php-fpm"
 maintainer       "Sebastian Johnsson"
 maintainer_email "sebastian@agiley.se"
 license          "MIT"
 description      "Installs and configures PHP-FPM."
-version          "0.1"
+version          "0.1.2"
 
-attribute 'php_fpm/pid_file', 
+attribute 'php_fpm/pid_file',
   :description  =>  'The location of the php-fpm pid-file.',
   :required     =>  "recommended"
 

@@ -2,7 +2,7 @@ package "php5-fpm"
 
 service "php5-fpm" do
   action    [:enable, :start]
-  supports  [:start, :restart, :stop]
+  supports  [:start, :restart, :reload, :stop]
 end
 
 template "/etc/php5/fpm/php.ini" do
