@@ -1,6 +1,7 @@
 default[:php_fpm][:pid_file]                            =   "/var/run/php5-fpm.pid"
 
 default[:php_fpm][:socket]                              =   "/dev/shm/php5-fpm.sock"
+default[:php_fpm][:listen_address]                      =   '127.0.0.1'
 default[:php_fpm][:port]                                =   9000
 
 default[:php_fpm][:listen_to]                           =   'socket'
