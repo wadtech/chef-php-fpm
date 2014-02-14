@@ -57,3 +57,6 @@ default[:php_fpm][:tunable][:limit_extensions]          =   nil
 
 default[:php_fpm][:tunable][:env_variables]             =   nil #If using this variable, a Hash is expected with values in the format of env variable => variable value.
 default[:php_fpm][:tunable][:limit_extensions]          =   nil
+
+# Install extra packages with this array!
+default[:php_fpm][:packages]                            =   []
