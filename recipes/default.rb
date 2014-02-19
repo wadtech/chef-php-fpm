@@ -4,7 +4,7 @@ template "/etc/init.d/php5-fpm" do
   source "php5-fpm.init.erb"
   owner "root"
   group "root"
-  mode "0644"
+  mode "0755"
   notifies :restart, "service[php5-fpm]"
 end
 
