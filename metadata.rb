@@ -3,7 +3,7 @@ maintainer       "Sebastian Johnsson"
 maintainer_email "sebastian@agiley.se"
 license          "MIT"
 description      "Installs and configures PHP-FPM."
-version          "0.1.3"
+version          "0.1.4"
 
 attribute 'php_fpm/pid_file',
   :description  =>  'The location of the php-fpm pid-file.',
